@@ -35,11 +35,11 @@ MLOps nace como una variante de DevOps en la que se pretende usar esa metodolog�
 
 Como pilares del MLOps podríamos poner:
 
-[](images/Diagrama_en_blanco_(1).png)
+![](images/Diagrama_en_blanco_(1).png)
 
 No vamos a entrar en profundidad en cada uno de los pasos, pues hay muchos recursos en los cuales se extiende la idea de una forma muy extensa y rigurosa. En lugar de eso, creemos que es más útil tener un conocimiento sólido del flujo de trabajo, de la *********pipeline********* que se puede seguir al desarrollar un proyecto.  Añadiendo en cada caso, una panorámica de los recursos disponibles para ello.
 
-[](images/Untitled.png)
+![](images/Untitled.png)
 
 ---
 
