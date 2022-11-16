@@ -1,0 +1,19 @@
+version: "3.5"
+
+services:
+  modelo:
+    image: ./images/model1
+    network:
+    command: ["uvicorn", "modelo.api_communication:app", "--host", "0.0.0.0", "--port", "80"]
+    ports:
+      - 5000:80
+
+
+  webApp:
+    image: ./images/webApp1
+    ports:
+      - 8080:8787
+    command: "streamlit run app.py --server.port 8080"
+    depends_on:
+      - modelo
+
