@@ -35,11 +35,11 @@ MLOps nace como una variante de DevOps en la que se pretende usar esa metodolog�
 
 Como pilares del MLOps podríamos poner:
 
-![Diagrama en blanco (1).png](Implementacion%20MLOps%20+%20IoT%20en%20Docker%20ea7604b4fa3d463d9b11f06cd9722876/Diagrama_en_blanco_(1).png)
+[](images/Diagrama_en_blanco_(1).png)
 
 No vamos a entrar en profundidad en cada uno de los pasos, pues hay muchos recursos en los cuales se extiende la idea de una forma muy extensa y rigurosa. En lugar de eso, creemos que es más útil tener un conocimiento sólido del flujo de trabajo, de la *********pipeline********* que se puede seguir al desarrollar un proyecto.  Añadiendo en cada caso, una panorámica de los recursos disponibles para ello.
 
-![Untitled](Implementacion%20MLOps%20+%20IoT%20en%20Docker%20ea7604b4fa3d463d9b11f06cd9722876/Untitled.png)
+[](images/Untitled.png)
 
 ---
 
@@ -47,7 +47,7 @@ No vamos a entrar en profundidad en cada uno de los pasos, pues hay muchos recur
 
 Mi caso práctico va a contar con los siguientes componentes:
 
-![images/parts%20mlopswork.png](Implementacion%20MLOps%20+%20IoT%20en%20Docker%20ea7604b4fa3d463d9b11f06cd9722876/parts_mlopswork.png)
+![images/parts_mlopswork.png](images/parts_mlopswork.png)
 
 Primero se escribió el código de la API Rest, usando FastAPI. Esto nos permitirá tener el sensor y la unidad de procesamiento o servidor, en lugares separados, esto es especialmente importante cuando tenemos varios sensores repartidos por ahí.
 
@@ -65,7 +65,7 @@ Tenemos 3 módulos separados que necesitan comunicarse para realizar la función
 2. El dispositivo IoT enviando datos mediante API Rest.
 3. La interfaz web creada con Streamlit, capaz de interactuar con el usuario.
 
-![containers%20diagrama%20(1).png](Implementacion%20MLOps%20+%20IoT%20en%20Docker%20ea7604b4fa3d463d9b11f06cd9722876/containers_diagrama_(1).png)
+![containers_diagrama_(1).png](images/containers_diagrama_(1).png)
 
 Lo siguiente fue, crear el código que une a los tres módulos. Este código lee de la base de datos que se está rellenando por el sensor IoT. Pasa eso datos al modelo y recibe la predicciones, y finalmente las muestras por la interfaz gráfica. Entre medias, se permite que la interfaz gráfica modifique algunos argumentos internos para que por ejemplo, la predicción se haga a 5 días futuros y no a 1 etc. 
 
