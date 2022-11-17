@@ -8,11 +8,11 @@ chart_data = pd.DataFrame(
      columns=['a', 'b', 'c'])
 
 #esto va a leer del api
-testo=st.text_input("Que")
-url_base=f"localhost:5000"
+testo=st.text_input("Que",value="a")
+url_base=f"http://modelo:80"
 path=f"/predict/{testo}"
 print(url_base+path)
 respuesta=requests.get(url_base+path)
 
-st.write(respuesta)
+st.write(str(respuesta.content))
 st.line_chart(chart_data)
