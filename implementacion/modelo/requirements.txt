@@ -1,6 +1,5 @@
 fastapi
 scikit-learn
-scipy
 numpy 
 pandas
 pydantic
